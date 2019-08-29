@@ -22,7 +22,8 @@ class ViewController: UIViewController {
     
     var room : TVIRoom?
     var camera: TVICameraSource?
-
+    let roomName : String = "com.innofied.SampleVideoCallApp"
+    
     // Create an audio track
     var localAudioTrack = TVILocalAudioTrack()
     
@@ -69,7 +70,7 @@ class ViewController: UIViewController {
     @IBAction func createRoom(_ sender: UIButton) {
         
         let connectOptions = TVIConnectOptions.init(token: accessToken) { (builder) in
-            builder.roomName = "com.innofied.SampleVideoCallApp"
+            builder.roomName = self.roomName
             
             if let audioTrack = self.localAudioTrack {
                 builder.audioTracks = [ audioTrack ]
@@ -102,7 +103,7 @@ class ViewController: UIViewController {
     @IBAction func joinRoom(_ sender: UIButton) {
         
         let connectOptions = TVIConnectOptions.init(token: accessToken) { (builder) in
-            builder.roomName = "com.innofied.SampleVideoCallApp"
+            builder.roomName = self.roomName
             
             if let audioTrack = self.localAudioTrack {
                 builder.audioTracks = [ audioTrack ]
