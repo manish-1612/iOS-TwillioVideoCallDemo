@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="CmZ-dm-y72">
+            <objects>
+                <viewController id="iAp-sD-hna" customClass="LoginViewController" customModule="SampleVideoCallApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="97S-P0-uDq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twilio demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ku-Tx-MQy">
+                                <rect key="frame" x="38" y="33" width="244" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="CCD-i4-MFS"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="244" id="xoM-xk-x8V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nzo-Q3-A7I">
+                                <rect key="frame" x="45" y="153" width="230" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Aez-rj-ZTe"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="kW6-ph-o4M"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="RoomName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N5l-vR-4rJ">
+                                <rect key="frame" x="45" y="214" width="230" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="05b-qT-VEt"/>
+                                    <constraint firstAttribute="height" constant="30" id="zft-tN-Ayd"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhR-i4-8uV">
+                                <rect key="frame" x="88" y="396" width="144" height="30"/>
+                                <color key="backgroundColor" red="0.06339285714285714" green="0.049107142857142856" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FnX-de-u3t"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="XYu-bm-b45"/>
+                                </constraints>
+                                <state key="normal" title="Enter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getAccessToken:" destination="iAp-sD-hna" eventType="touchUpInside" id="6id-Wl-7LT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3ku-Tx-MQy" firstAttribute="centerX" secondItem="fz9-Jc-lMo" secondAttribute="centerX" id="1Qw-Gh-5u0"/>
+                            <constraint firstItem="3ku-Tx-MQy" firstAttribute="top" secondItem="fz9-Jc-lMo" secondAttribute="top" constant="13" id="59O-g6-DJe"/>
+                            <constraint firstItem="N5l-vR-4rJ" firstAttribute="centerX" secondItem="fz9-Jc-lMo" secondAttribute="centerX" id="701-hy-Kwz"/>
+                            <constraint firstItem="Nzo-Q3-A7I" firstAttribute="top" secondItem="3ku-Tx-MQy" secondAttribute="bottom" constant="99" id="APb-ga-KMb"/>
+                            <constraint firstItem="N5l-vR-4rJ" firstAttribute="top" secondItem="Nzo-Q3-A7I" secondAttribute="bottom" constant="31" id="W87-Sn-Fqe"/>
+                            <constraint firstItem="OhR-i4-8uV" firstAttribute="top" secondItem="N5l-vR-4rJ" secondAttribute="bottom" constant="152" id="eeX-Ub-qs5"/>
+                            <constraint firstItem="Nzo-Q3-A7I" firstAttribute="centerX" secondItem="fz9-Jc-lMo" secondAttribute="centerX" id="hYV-tv-0dv"/>
+                            <constraint firstItem="OhR-i4-8uV" firstAttribute="centerX" secondItem="fz9-Jc-lMo" secondAttribute="centerX" id="n2E-Dn-8Za"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fz9-Jc-lMo"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="Nzo-Q3-A7I" id="lwv-ge-JiF"/>
+                        <outlet property="roomNameTextField" destination="N5l-vR-4rJ" id="OUP-VE-fy9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jfa-Kv-mRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271.19999999999999" y="-208.24587706146929"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleVideoCallApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ok3-Nt-DF0">
+                                <rect key="frame" x="218.5" y="518" width="86.5" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.057227172707508656" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dzh-jV-5Zu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
+                                <state key="normal" title="Leave Room">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="leaveRoom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c6h-BE-d7w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvD-58-vau">
+                                <rect key="frame" x="116.5" y="518" width="87" height="30"/>
+                                <color key="backgroundColor" red="0.10589925283292935" green="0.46963972285621525" blue="0.12465472576313003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Rts-La-8M5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
+                                <state key="normal" title="Join Room">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="joinRoom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H4j-R1-OX6"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8VS-Th-VqD" customClass="TVIVideoView">
+                                <rect key="frame" x="16" y="20" width="288" height="472"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVl-nx-VBZ" customClass="TVIVideoView">
+                                <rect key="frame" x="16" y="20" width="288" height="472"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7AX-rc-g7R">
+                                <rect key="frame" x="15" y="518" width="86.5" height="30"/>
+                                <color key="backgroundColor" red="0.30535050990056711" green="0.44798593481517218" blue="0.74989880181347157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XmW-tP-Ug3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
+                                <state key="normal" title="Create Room">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createRoom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9W5-F4-8hD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ok3-Nt-DF0" firstAttribute="leading" secondItem="UvD-58-vau" secondAttribute="trailing" constant="15" id="2Wn-Be-zVR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xVl-nx-VBZ" secondAttribute="trailing" constant="16" id="7ol-Jd-8A1"/>
+                            <constraint firstItem="UvD-58-vau" firstAttribute="width" secondItem="Ok3-Nt-DF0" secondAttribute="width" id="BIm-lG-fOH"/>
+                            <constraint firstItem="xVl-nx-VBZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="GTS-xB-cPs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ok3-Nt-DF0" secondAttribute="trailing" constant="15" id="GaZ-bs-TyI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8VS-Th-VqD" secondAttribute="bottom" constant="76" id="Jqr-yr-mEc"/>
+                            <constraint firstItem="7AX-rc-g7R" firstAttribute="width" secondItem="UvD-58-vau" secondAttribute="width" id="Npu-ja-42i"/>
+                            <constraint firstItem="8VS-Th-VqD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="O4j-74-COj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ok3-Nt-DF0" secondAttribute="bottom" constant="20" id="OOh-2L-s5C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xVl-nx-VBZ" secondAttribute="bottom" constant="76" id="cAu-aZ-KEN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7AX-rc-g7R" secondAttribute="bottom" constant="20" id="grW-LF-P1C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8VS-Th-VqD" secondAttribute="trailing" constant="16" id="lca-Bp-VaU"/>
+                            <constraint firstItem="UvD-58-vau" firstAttribute="leading" secondItem="7AX-rc-g7R" secondAttribute="trailing" constant="15" id="tZT-fW-Nig"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UvD-58-vau" secondAttribute="bottom" constant="20" id="wlB-Ac-LMx"/>
+                            <constraint firstItem="7AX-rc-g7R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="xZB-LG-FFr"/>
+                            <constraint firstItem="8VS-Th-VqD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yRi-vt-p4Z"/>
+                            <constraint firstItem="xVl-nx-VBZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zYX-Aa-qOx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="leadingConstraintForPreviewView" destination="GTS-xB-cPs" id="e9f-Vc-gmc"/>
+                        <outlet property="previewView" destination="xVl-nx-VBZ" id="mQ2-OY-L17"/>
+                        <outlet property="remoteView" destination="8VS-Th-VqD" id="D6t-qh-cyH"/>
+                        <outlet property="topConstraintForPreviewView" destination="zYX-Aa-qOx" id="wuV-Sh-NXV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="680.625" y="-197.53521126760563"/>
+        </scene>
+    </scenes>
+</document>
